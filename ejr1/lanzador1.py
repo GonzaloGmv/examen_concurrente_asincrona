@@ -1,22 +1,12 @@
 import time
-from ejr1.simulacion_bancaria import Cuenta
+from ejr1.simulacion_bancaria import Cuenta, operacion
 
 def main1():
     cuenta = Cuenta()
     print("Actualmente tiene en la cuenta", cuenta.saldo, "€")
     print("Realizando ingresos y retiradas...")
     time.sleep(1)
-    for i in range(40):
-        cuenta.ingresar(100)
-    for i in range(20):
-        cuenta.ingresar(50)
-    for i in range(60):
-        cuenta.ingresar(20)
-    for i in range(40):
-        cuenta.retirar(100)
-    for i in range(20):
-        cuenta.retirar(50)
-    for i in range(60):
-        cuenta.retirar(20)
+    valores = [100]*40 + [50]*20 + [20]*60 + [-100]*40 + [-50]*20 + [-20]*60
+    list(map(operacion, [cuenta]*len(valores), valores))
     print("Ingresos y retiradas realizados")
     print("Actualmente tiene en la cuenta", cuenta.saldo, "€")
