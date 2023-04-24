@@ -19,3 +19,5 @@ def main2():
         ruleta.lanzar()
     print("Saldo del jugador 3: ", jugador3.saldo)
     print("Saldo de la ruleta: ", ruleta.saldo)
+
+#he estado haciendolo con threads pero no me da tiempo a terminarlo, lo dejo asimpara que no este a medias
