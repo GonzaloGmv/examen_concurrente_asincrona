@@ -11,8 +11,6 @@ def main2():
     print("Saldo del jugador 1: ", jugador1.saldo)
     print("Saldo del jugador 2: ", jugador2.saldo)
     print("Saldo de la ruleta: ", ruleta.saldo)
-
-    #martingala
     jugador3 = Jugador()
     apuesta = 10
     while jugador3.saldo<=1000 and jugador3.saldo>apuesta and ruleta.saldo>apuesta*36:
