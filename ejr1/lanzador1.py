@@ -1,5 +1,5 @@
 import time
-from simulacion_bancaria import Cuenta
+from ejr1.simulacion_bancaria import Cuenta
 
 def main1():
     cuenta = Cuenta()
@@ -20,6 +20,3 @@ def main1():
         cuenta.retirar(20)
     print("Ingresos y retiradas realizados")
     print("Actualmente tiene en la cuenta", cuenta.saldo, "€")
-
-
-main1()
